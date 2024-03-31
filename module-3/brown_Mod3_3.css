@@ -1,0 +1,55 @@
+/* Jaci Brown || CSD 340 || Module 3_3 */
+
+body{
+    font-size:16px;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ul, ol {
+    font-weight: 300;
+}
+
+
+
+div.left{
+    border: 1px solid red;
+    border-radius: 15px;
+    float:left;
+    width: 45%;
+    padding: 10px;
+
+}
+
+div.right{
+    border: 1px dashed red;
+    border-radius: 15px;
+    float: right;
+    width: 45%;
+    padding: 10px;
+    padding-bottom: 20px;
+
+}
+
+div.below{
+    float: right;
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
