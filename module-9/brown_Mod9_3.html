@@ -1,0 +1,69 @@
+<!-- Jaci Brown, HTML for Module 2.2 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <link rel="stylesheet" href = "brown_Mod2_2.css"  type = "text/css" >
+    <meta name = "description" content="Assignment 2-2" >
+    <meta name = "keywords" content= "intro, html, css" >
+    <meta name = "robots" content = "noindex" >
+    <meta name = "author" content ="Jaci Brown" >
+    
+    <script>
+        var strP1 = "I was previously";
+        var strP2 = "crafting";
+        var strP3 = "video games";
+        var strP4 = "formality";
+    </script>
+</head>
+
+<body>
+
+<div class="container"> 
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <h2>Chapter 1</h2>
+    <p class = "intro">My name is Jaci Brown. I am a 31 year old woman from Southern Mississippi. 
+        I currently attend university at Bellvue University in persuit of a degree in Software Development.
+        <span id = "I was previously">_________________</span> a full time mortgage loan officer. I am married with one son and two dogs.
+    </p>
+
+    <p>In my free time, I enjoy <span id = "crafting">________</span>, cooking, and learning. My favorite drink is coffee. My favorite 
+        food bite is the first tiny bite of a slice of pizza. My favorite craft is likely sewing, but it
+        truly depends on my mood.
+        </p>
+
+    <p>Most of my hobbies involve creating something. I tend to feel that I've 
+        wasted time when I just read for pleasure or play <span id = "video games">___________</span>, though I do occasionaly 
+        enjoy those activities too. I am hopeful that the persuit of software development 
+        will allow me to create more things that can be more easily shared than a solitary physical object.
+    </p>
+
+    <p>Throughout my childhood, creating was an excellent means of emotional release. I am working dilligently 
+        as a mother to share the love of creating with my child to promote creativity, resilience, and fine motor skills.
+        <span class = "sentence">Creating things can also mask some of the <span id = "formality">_________</span> of learning, as something you want to accomplish can 
+        propel you forward with a zest for knowledge that eliminates most of the monotony. </span>
+    </p>
+
+    <p>
+        <button type = "button"
+        onclick = "document.getElementById('I was previously').innerHTML = strP1">I was previously</button>
+        <button type = "button"
+        onclick = "document.getElementById('crafting').innerHTML = strP2">crafting</button>
+        <button type = "button"
+        onclick = "document.getElementById('video games').innerHTML = strP3">video games</button>
+        <button type = "button"
+        onclick = "document.getElementById('formality').innerHTML = strP4">formality</button>
+    </p>
+
+    <hr >
+    <address>
+        <p><a href = "https://www.bellevue.edu/">Bellevue University</a></p>
+        <p>1000 Galvin Rd S</p>
+        <p>Bellevue, NE 68005</p>
+    </address>
+
+</div>
+</body>
+</html>
+
