@@ -1,0 +1,44 @@
+<!-- Jaci Brown || CSD 340 || Mod 10.3 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <link rel="stylesheet" href = "brown_Mod10_3.css"  type = "text/css" >
+</head>
+
+<header>
+    <h1>Assignment 10.3: JavaScript Exercise, Part 2</h1>
+</header>
+<body>
+<div id="navbar" class = "navbar">
+    <a href = "../index.html">Home</a>
+    <a href = "#">About</a>
+    <a href = "#">Contact</a>
+</div><!--End NavBar div-->
+<script>
+    function cycleImage(){
+        icon.src="images/pridePrejudice.jpg"
+    }
+</script>
+<div id="container" class="container">
+ 
+
+    <!-- <element.onclick="myFunctionName()">guts</element> -->
+    <div class="card" id="item1">
+        <h3>Click to see my other favorite novel.</h3>
+        <figure>
+            <img id ="icon" class="card-content" src= "images/redFernGrows.jpg" onclick="cycleImage()">
+            
+        </figure>
+        
+    </div>
+
+    
+    
+</div><!-- end container div-->
+<div id ="footer" class = "footer">
+    <p><a href="../index.html">Return to Homepage</a></p>
+</div>
+</body>
+</html>
