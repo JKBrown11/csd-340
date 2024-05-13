@@ -1,0 +1,113 @@
+<!-- Jaci Brown || CSD 340 || Mod 11.2 
+text box, three buttons. 'add': on click, call add function, ALERT- pop up to show what was added where,
+                'delete last entry': on click, call function to delete last using array.length or pop() or Optional- let user select,   
+                 'display': on click, call function to displaying items starting at 1.
+script section: function for adding an element to an array, 
+                function for deleting an element in array, 
+                function for displaying the contents
+
+References: 
+https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/
+https://www.w3schools.com/html/html_scripts.asp
+https://www.w3schools.com/js/js_arrays.asp
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <link rel="stylesheet" href = "brown_Mod11_2.css"  type = "text/css" >
+</head>
+
+<header>
+    <h1>Assignment 11.2: JavaScript Exercise, Part 3</h1>
+</header>
+
+<body>
+    <div id="navbar" class = "navbar">
+        <a href = "../index.html">Home</a>
+        <a href = "#">About</a>
+        <a href = "#">Contact</a>
+    </div><!--End NavBar div-->
+
+
+
+    <div id="container" class="container">
+    
+
+        <!-- <element.onclick="myFunctionName()">guts</element> -->
+        <div class="card">
+        <h3>Temporary To-Do List</h3>
+        <ul id="list">
+
+        </ul>
+            <br>
+            <!-- Show to do list-->
+
+        </div>
+
+        <div class="controls">
+            <input type="text" id="item" placeholder="Example 1">
+            <button type="button" id="btAdd" onclick="addItem(item)">Add to List</button>
+            <button type="button" id="btUndo" onclick="removeLast()">Undo</button>
+            <button type="button" id="btRefresh" onclick="printList()">Update List</button>
+        </div>
+        
+        
+    </div><!-- end container div-->
+
+    <div id ="footer" class = "footer">
+        <p><a href="../index.html">Return to Homepage</a></p>
+    </div>
+    
+<script>
+    //create an array
+    const toDoLi = [];
+    let counter = 0;
+    //printList();
+    
+    function addItem(item){
+        let myItem = item;
+        toDoLi[counter] = myItem;
+        alert("Item added to list: " + toDoLi[counter].value);
+        console.log(myItem.value + " :item added");
+        console.log(toDoLi[counter].value + " :array[counter]");
+        ++counter;
+        console.log("Counter after push: " + counter);
+        console.log(toDoLi.length + " :list length");
+
+        }
+
+    function removeLast(){
+        toDoLi.pop();
+        --counter;
+        }
+
+    function printList(){
+        //reset list elements. 
+        document.getElementById("list").innerHTML = "";
+        console.log(toDoLi[0].value);
+
+        //re-print list from beginning
+        for(var i = 0; i < toDoLi.length; ++i){
+            //something is wrong here, it only picks up the most recently added value, not arr[0]
+            console.log(i + " :index " + toDoLi[i].value + " : value at index")
+            let display = "<li> Num ";
+            display += (i +1);
+            display += ". ";
+            display += toDoLi[i].value;
+            console.log(i + ": value of i after calling value in display")
+            display += " </li>";
+            console.log(display + " added to inner html");
+            document.getElementById("list").innerHTML += display;
+
+            
+        }
+    
+    }
+
+</script>
+
+</body>
+</html>
