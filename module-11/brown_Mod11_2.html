@@ -49,7 +49,7 @@ https://www.w3schools.com/js/js_arrays.asp
 
         <div class="controls">
             <input type="text" id="item" placeholder="Example 1">
-            <button type="button" id="btAdd" onclick="addItem(item)">Add to List</button>
+            <button type="button" id="btAdd" onclick="addItem(/*item*/)">Add to List</button>
             <button type="button" id="btUndo" onclick="removeLast()">Undo</button>
             <button type="button" id="btRefresh" onclick="printList()">Update List</button>
         </div>
@@ -67,16 +67,21 @@ https://www.w3schools.com/js/js_arrays.asp
     let counter = 0;
     //printList();
     
-    function addItem(item){
-        let myItem = item;
+    function addItem(/*item*/){
+       /* let myItem = item;
         toDoLi[counter] = myItem;
         alert("Item added to list: " + toDoLi[counter].value);
         console.log(myItem.value + " :item added");
         console.log(toDoLi[counter].value + " :array[counter]");
         ++counter;
         console.log("Counter after push: " + counter);
-        console.log(toDoLi.length + " :list length");
+        console.log(toDoLi.length + " :list length");*/
 
+        //restart add function
+        let myItem = document.getElementById("item");
+        console.log(myItem.value);
+        toDoLi.push(myItem.value);
+        console.log(toDoLi[0]);
         }
 
     function removeLast(){
@@ -87,16 +92,16 @@ https://www.w3schools.com/js/js_arrays.asp
     function printList(){
         //reset list elements. 
         document.getElementById("list").innerHTML = "";
-        console.log(toDoLi[0].value);
+        console.log(toDoLi[0]);
 
         //re-print list from beginning
         for(var i = 0; i < toDoLi.length; ++i){
             //something is wrong here, it only picks up the most recently added value, not arr[0]
-            console.log(i + " :index " + toDoLi[i].value + " : value at index")
+            console.log(i + " :index " + toDoLi[i] + " : value at index")
             let display = "<li> Num ";
             display += (i +1);
             display += ". ";
-            display += toDoLi[i].value;
+            display += toDoLi[i];
             console.log(i + ": value of i after calling value in display")
             display += " </li>";
             console.log(display + " added to inner html");
